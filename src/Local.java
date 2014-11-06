@@ -23,7 +23,11 @@ public class Local implements IProjectElements {
 	 * @param name
 	 * @param cost
 	 */
+<<<<<<< HEAD
 	public Local(  String name, String local, double cost) {
+=======
+	public Local( String local, String name, double cost) {
+>>>>>>> 7e77928a2809fa55e27a80d53a897a6b6dfaebfd
 		this.cost = cost;
 		this.Localization = local;
 		this.name = name;
@@ -41,8 +45,13 @@ public class Local implements IProjectElements {
 	}
 
 	@Override
+<<<<<<< HEAD
 	public double getCosts()
 	{		
+=======
+	public double getCosts() {
+		
+>>>>>>> 7e77928a2809fa55e27a80d53a897a6b6dfaebfd
 		return cost;
 	}
 
