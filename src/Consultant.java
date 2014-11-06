@@ -1,5 +1,5 @@
 
-public class Consultant implements ProjectElements {
+public class Consultant implements Worker, IProjectElements  {
 
 	
 	private String workerName;
@@ -11,8 +11,7 @@ public class Consultant implements ProjectElements {
 		this.workerHours = hours;
 		this.workerName = name;
 	}
-	
-	
+
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
@@ -24,5 +23,14 @@ public class Consultant implements ProjectElements {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public double getHourCost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
 
 }

@@ -10,7 +10,7 @@
  * @author José Oliveira
  *
  */
-public class Local implements ProjectElements {
+public class Local implements IProjectElements {
 
 	
 	private String Localization;
