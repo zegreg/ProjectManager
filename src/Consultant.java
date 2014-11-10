@@ -1,16 +1,20 @@
 
-<<<<<<< HEAD
-public class Consultant extends Worker
+/**
+ * Class whose instance represent a consultant. This class extends {@link AWorker}. 
+ * 
+ * Implementation notes:
+ * Each consultant are characterized by its name, the value of his Payment per hour, and the number
+ * of hours of work, and if it is a leader/manager is characterized also by his bonus.
+ * This class have two constructor because a consultant can be a leader and a leader receive a bonus. 
+ * 
+ * @author Filipa E., Filipa G., Gonçalo C., José O.
+ * @since 6/11/2014
+ */
+public class Consultant extends AWorker
 {
-=======
-public class Consultant implements Worker, IProjectElements  {
->>>>>>> 7e77928a2809fa55e27a80d53a897a6b6dfaebfd
-
-	
 	private String workerName;
-	private double workerCost;
+	private double workerCostByHour;
 	private double workerHours;
-<<<<<<< HEAD
 	private double bonus;
 	
 	/**
@@ -21,7 +25,7 @@ public class Consultant implements Worker, IProjectElements  {
 	 */
 	public Consultant( String name, double cost, double hours)
 	{
-		this.workerCost = cost;
+		this.workerCostByHour = cost;
 		this.workerHours = hours;
 		this.workerName = name;
 		this.bonus = 0;
@@ -36,56 +40,36 @@ public class Consultant implements Worker, IProjectElements  {
 	 */
 	public Consultant( String name, double cost, double hours, double bonus)
 	{
-		this.workerCost = cost;
+		this.workerCostByHour = cost;
 		this.workerHours = hours;
 		this.workerName = name;
 		this.bonus = bonus;
-	}
-	
-	
+	}	
+
+	/**
+	 * @return element's name
+	 */
 	@Override
 	public String getName()
 	{
 		return workerName;
 	}
 
+	/**
+	 * @return cost of the object worker for all project
+	 */
 	@Override
 	public double getCosts()
 	{
-		return workerCost * workerHours + bonus;
+		return workerCostByHour * workerHours + bonus;
 	}
 
+	/**
+	 * @return cost of the object worker per hour
+	 */
 	@Override
 	public double getHourCost()
 	{
-=======
-	
-	public Consultant( String name, double cost, double hours) {
-		this.workerCost = cost;
-		this.workerHours = hours;
-		this.workerName = name;
+		return workerCostByHour;
 	}
-
-	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public double getCosts() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double getHourCost() {
->>>>>>> 7e77928a2809fa55e27a80d53a897a6b6dfaebfd
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-	
-	
-
 }

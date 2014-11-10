@@ -1,58 +1,65 @@
-import java.util.ArrayList;
 
-
-public class ContainerProjects implements IProjectElements
+/**
+ * This class extends {@link AProjectElementsContainer}
+ * The instances of this class represents a project Container.
+ * It cost is the sum of all elements costs in that container.
+ * In addition, the elements are sorted by name.
+ * 
+ * @author Filipa E., Filipa G., Gonçalo C., José O.
+ * @since  6/11/2014
+ */
+public class ContainerProjects extends AProjectElementsContainer
 {
-	private ArrayList< Project > subProjects;
-	
 	public ContainerProjects()
 	{
-		this.subProjects  = new ArrayList< Project >();
+		super();
 	}
-	
-	public boolean addProject( Project project)
+
+	//ADDs
+	/**
+	 * This method add a subproject to a project ordered by alphabetical order,
+	 */
+	@Override
+	public boolean ordering( IProjectElements project )
 	{
-		for( Project element : subProjects)
+		for( IProjectElements element : getElementsList() )
 		{
-			if( element.getName().equals( project.getName() ))
-				return false;
-		}
-		
-		for( Project element : subProjects)
-		{
+			// the compareToIgnoreCase, compares two string (ignore case) and returns an integer, depending on the 
+			//lexicographical order 
 			if( element.getName().compareToIgnoreCase( project.getName() ) > 0 )
 			{
-				subProjects.add(subProjects.indexOf( element ), project);
+				// if the subproject that we want to add to the project, in alphabetical order cames
+				// first then a certain project already inserted it will be inserted into the index 
+				//array of other subproject.
+				getElementsList().add( getElementsList().indexOf(element), project );
 				return true;
 			}
 		}
-		subProjects.add( project );
-		return true;
+		return getElementsList().add( project );
 	}
 	
-	
+	//GETs
+	/**
+	 * Searching a project in elementsList by name
+	 * @return element if there is an element with the inserted name, null otherwise
+	 */
 	@Override
-	public String getName()
+	public Project getElementByName( String name )
 	{
-		// TODO Auto-generated method stub
+		//For each element of arrayList getElementsList , check if there is an element (project/subproject) with 
+		//the same name that was entered at the console. If it exists, returns the (Project)element
+		for( IProjectElements element : getElementsList() )
+		{
+			if( ((Project)element).getSubProjectByName( name ) == null)
+				continue;
+			else
+				return ((Project)element).getSubProjectByName(name);
+		}
 		return null;
 	}
 
-	@Override
-	public double getCosts()
-	{
-		double cost = 0;
-		for( Project element : subProjects)
-		{
-			cost += element.getCosts();
-		}
-		return cost;
-	}
-
-	public Project getSubProject(int i)
-	{
-		return subProjects.get( i );
-	}
-	
-
 }
+
+
+
+

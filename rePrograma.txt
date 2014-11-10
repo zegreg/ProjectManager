@@ -1,0 +1,23 @@
+rePrograma, cost: 51900.0€
+Local: Cave, Saldanha, cost: 500.0€
+Manager: Filipa G., payment per hour:20.0, cost: 6200.0€
+Team: Filipe, payment per hour:20.0, cost: 6200.0€
+
+rePrograma - a tua carreira, cost: 26050.0€
+Local: sala ao lado, Saldanha, cost: 300.0€
+Manager: José, payment per hour:20.0, cost: 8150.0€
+Team: Lara, payment per hour:10.0, cost: 5000.0€
+Hugo, payment per hour:15.0, cost: 4600.0€
+Daniel, payment per hour:20.0, cost: 8000.0€
+
+
+
+rePrograma - o teu dia, cost: 12950.0€
+Local: a sala atrás do vidro, Saldanha, cost: 200.0€
+Manager: Filipa E., payment per hour:20.0, cost: 8150.0€
+Team: Eva, payment per hour:15.0, cost: 4600.0€
+
+
+
+
+

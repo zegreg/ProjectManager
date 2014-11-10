@@ -1,20 +1,19 @@
+
 /**
- * This Class give us the local name and it´s local cost.
- * <p> Local Implementation :
- * <ul> <li> Localization;
- * <li> Local name;
- * <li> Local costs;
+ * This Class implement {@link IProjectElements}.
+ * <p> Local Implementation:
+ * <ul> <li> Local name;
+ * <li> Localization;
+ * <li> Local costs.
  * </ul>
  * 
- * 
- * @author José Oliveira
- *
+ * @author Filipa E., Filipa G., Gonçalo C., José O.
+ * @since  6/11/2014
  */
-public class Local implements IProjectElements {
-
-	
-	private String Localization;
+public class Local implements IProjectElements
+{
 	private String name;
+	private String Localization;
 	private double cost;
 	
 	/**
@@ -23,36 +22,34 @@ public class Local implements IProjectElements {
 	 * @param name
 	 * @param cost
 	 */
-<<<<<<< HEAD
-	public Local(  String name, String local, double cost) {
-=======
-	public Local( String local, String name, double cost) {
->>>>>>> 7e77928a2809fa55e27a80d53a897a6b6dfaebfd
-		this.cost = cost;
-		this.Localization = local;
+	public Local( String name, String local, double cost )
+	{
 		this.name = name;
+		this.Localization = local;
+		this.cost = cost;
 	}
-	
-	public String getLocal() {
-		return Localization;
-	}
-	
 	
 	@Override
-	public String getName() {
-		
+	public String getName()
+	{
 		return name;
+	}
+	
+	public String getLocal()
+	{
+		return Localization;
 	}
 
 	@Override
-<<<<<<< HEAD
 	public double getCosts()
 	{		
-=======
-	public double getCosts() {
-		
->>>>>>> 7e77928a2809fa55e27a80d53a897a6b6dfaebfd
 		return cost;
+	}
+
+	@Override
+	public String writeInfo()
+	{
+		return getName() +", " +getLocal() +", cost: " +getCosts() +"€";
 	}
 
 	
