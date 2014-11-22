@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+//teste do gonÃ§alo
 /**
  * This class implements {@link IProjectElements}.
  * Is an abstract class that represent lists of elements of a project.
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  * <li> {@link TeamWorkers}
  * <ul>
  * 
- * @author Filipa E., Filipa G., Gonçalo C., José O.
+ * @author Filipa E., Filipa G., Gonï¿½alo C., Josï¿½ O.
  * @since 6/11/2014
  */
 public abstract class AProjectElementsContainer implements IProjectElements

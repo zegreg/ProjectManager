@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
+/** 
  * Class for Project Manager. Create a new project and write it all its information in .txt file.
  * <p>Commands:
  * <li>ADD_PROJECT: add a subproject, to a project/subproject.
@@ -28,7 +28,7 @@ import java.util.Scanner;
  * <li>readConsultant: ask for a consultant information.
  * <li>inputDouble: verify if the inputed data is double type.  
  * 
- * @author Filipa E., Filipa G., Gonçalo C., José O.
+ * @author Filipa E., Filipa G., Gonï¿½alo C., Josï¿½ O.
  * @since 6/11/2014
  */
 public class AppProjectManager
